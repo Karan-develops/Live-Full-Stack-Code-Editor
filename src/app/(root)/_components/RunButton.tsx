@@ -17,16 +17,16 @@ const RunButton = () => {
 
   const handleRun = async () => {
     await runCode();
-    // const result = getCodeExecutionResult();
+    const result = getCodeExecutionResult();
 
-    // if (user && result) {
-    //   await saveExecution({
-    //     language,
-    //     code: result.code,
-    //     output: result.output || undefined,
-    //     error: result.error || undefined,
-    //   });
-    // }
+    if (user && result) {
+      await saveExecution({
+        language,
+        code: result.code,
+        output: result.output || undefined,
+        error: result.error || undefined,
+      });
+    }
   };
 
   return (
