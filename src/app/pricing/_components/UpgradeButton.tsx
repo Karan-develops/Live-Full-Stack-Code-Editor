@@ -2,8 +2,8 @@ import { Zap } from "lucide-react";
 import Link from "next/link";
 
 const UpgradeButton = () => {
-  //TODO:
-  const CHEKOUT_URL = "";
+  const CHEKOUT_URL =
+    "https://karan-dev.lemonsqueezy.com/buy/9ba111a7-0563-4326-8f03-1a465e617511";
   return (
     <Link
       href={CHEKOUT_URL}
