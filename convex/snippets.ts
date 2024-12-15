@@ -126,8 +126,8 @@ export const starSnippet = mutation({
       .withIndex("by_user_id_and_snippet_id")
       .filter(
         (q) =>
-          q.eq(q.field("snippetId"), args.snippetId) &&
-          q.eq(q.field("userId"), userIdentity.subject)
+          q.eq(q.field("userId"), userIdentity.subject) &&
+          q.eq(q.field("snippetId"), args.snippetId)
       )
       .first();
 
@@ -215,5 +215,25 @@ export const deleteComment = mutation({
       throw new Error("UnAuthorized to delete the comment");
     }
     await ctx.db.delete(args.commentId);
+  },
+});
+
+export const getStarredSnippets = query({
+  handler: async (ctx) => {
+    const userIdentity = await ctx.auth.getUserIdentity();
+    if (!userIdentity) {
+      return [];
+    }
+    const stars = await ctx.db
+      .query("stars")
+      .withIndex("by_user_id")
+      .filter((q) => q.eq(q.field("userId"), userIdentity.subject))
+      .collect();
+
+    const starSnippets = await Promise.all(
+      stars.map((star) => ctx.db.get(star.snippetId))
+    );
+
+    return starSnippets.filter((snippet) => snippet !== null);
   },
 });
