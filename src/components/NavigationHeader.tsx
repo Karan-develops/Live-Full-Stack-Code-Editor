@@ -1,7 +1,8 @@
 import HeaderProfileBtn from "@/app/(root)/_components/HeaderProfileBtn";
 import { SignedOut } from "@clerk/nextjs";
-import { Blocks, Code2, Sparkles } from "lucide-react";
+import { ArrowUpRightFromCircle, Blocks, CloudUpload, Code2, Sparkles } from "lucide-react";
 import Link from "next/link";
+import GoBackBtn from "./GoBackBtn";
 
 const NavigationHeader = () => {
   return (
@@ -48,8 +49,13 @@ const NavigationHeader = () => {
               <span className="text-sm font-medium relative z-10 group-hover:text-white transition-colors">
                 Snippets
               </span>
+              <CloudUpload  className="size-4 relative z-10 group-hover:rotate-3 transition-transform" />
             </Link>
+            <div className="ml-32">
+          <GoBackBtn/>
           </div>
+          </div>
+          
           {/* right rection */}
           <div className="flex items-center gap-4">
             <SignedOut>
@@ -68,6 +74,9 @@ const NavigationHeader = () => {
             </SignedOut>
             {/* profile button */}
             <HeaderProfileBtn />
+            <Link href={"/profile"}>
+            <ArrowUpRightFromCircle className="size-5"/>
+          </Link>
           </div>
         </div>
       </div>

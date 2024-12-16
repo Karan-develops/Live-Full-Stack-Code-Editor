@@ -60,7 +60,7 @@ const RunButton = () => {
             <div className="relative flex items-center justify-center w-4 h-4">
               <Play className="w-4 h-4 text-white/90 transition-transform group-hover:scale-110 group-hover:text-white" />
             </div>
-            <span className="text-sm font-medium text-white/90 group-hover:text-white">
+            <span className="text-md font-medium text-white/90 group-hover:text-white">
               Run Code
             </span>
           </>

@@ -3,7 +3,7 @@ import { ConvexHttpClient } from "convex/browser";
 import React from "react";
 import { api } from "../../../../convex/_generated/api";
 import Link from "next/link";
-import { Blocks, Code2, Sparkles } from "lucide-react";
+import { ArrowUpRightFromCircle, Blocks, CloudUpload, Code2, FileCode2, Sparkles } from "lucide-react";
 import { SignedIn } from "@clerk/nextjs";
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";
@@ -53,16 +53,17 @@ const Header = async () => {
           <nav className="flex items-center space-x-1">
             <Link
               href="/snippets"
-              className="relative group flex items-center gap-2 px-4 py-1.5 rounded-lg text-gray-300 bg-gray-800/50 hover:bg-blue-500/10 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg overflow-hidden"
+              className="ml-20 relative group flex items-center gap-2 px-5 py-2 rounded-lg text-blue-300 bg-gray-800/50 hover:bg-blue-500/10 border border-gray-800 hover:border-blue-500/50 transition-all duration-300 shadow-lg overflow-hidden"
             >
               <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10 opacity-0 group-hover:opacity-100 transition-opacity" />
               <Code2 className="w-4 h-4 relative z-10 group-hover:rotate-3 transition-transform" />
               <span
-                className="text-sm font-medium relative z-10 group-hover:text-white
+                className="text-md font-medium relative z-10 group-hover:text-white
                  transition-colors"
               >
                 Snippets
               </span>
+              <CloudUpload  className="size-4 relative z-10 group-hover:rotate-3 transition-transform" />
             </Link>
           </nav>
         </div>
@@ -96,8 +97,13 @@ const Header = async () => {
             <RunButton />
           </SignedIn>
 
-          <div className="pl-3 border-l border-gray-800">
+          <div className="flex gap-2 pl-3 border-l border-gray-800">
             <HeaderProfileBtn />
+          <div>
+          <Link href={"/profile"}>
+            <ArrowUpRightFromCircle className="size-5 mt-1"/>
+          </Link>
+          </div>
           </div>
         </div>
       </div>
