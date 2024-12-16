@@ -12,7 +12,7 @@ import CopyButton from "./_components/CopyButton";
 import { Editor } from "@monaco-editor/react";
 import { defineMonacoThemes, LANGUAGE_CONFIG } from "@/app/(root)/_constants";
 
-const page = () => {
+const SnippetDetailPage = () => {
   const snippetId = useParams().id;
   const snippet = useQuery(api.snippets.getSnippetByID, {
     snippetId: snippetId as Id<"snippets">,
@@ -105,4 +105,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default SnippetDetailPage;

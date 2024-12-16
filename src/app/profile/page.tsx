@@ -35,7 +35,7 @@ const TABS = [
   },
 ];
 
-const page = () => {
+const ProfilePage = () => {
   const { user, isLoaded } = useUser();
   const router = useRouter();
   const [activeTab, setActiveTab] = useState<"executions" | "starred">(
@@ -321,4 +321,4 @@ const page = () => {
   );
 };
 
-export default page;
+export default ProfilePage;

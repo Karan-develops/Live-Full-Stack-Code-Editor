@@ -1,6 +1,6 @@
 import GoBackBtn from "@/components/GoBackBtn"
 
-const page = () => {
+const PrivacyPage = () => {
   return (
     <div>
         <GoBackBtn/>
@@ -26,4 +26,4 @@ const page = () => {
   )
 }
 
-export default page
+export default PrivacyPage

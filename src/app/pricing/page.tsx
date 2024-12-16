@@ -11,7 +11,7 @@ import { SignedIn, SignedOut } from "@clerk/nextjs";
 import LoginButton from "@/components/LoginButton";
 import UpgradeButton from "./_components/UpgradeButton";
 
-const page = async () => {
+const PricingPage = async () => {
   const user = await currentUser();
   const convex = new ConvexHttpClient(process.env.NEXT_PUBLIC_CONVEX_URL!);
   const convexUser = await convex.query(api.users.getUser, {
@@ -142,4 +142,4 @@ const page = async () => {
   );
 };
 
-export default page;
+export default PricingPage;

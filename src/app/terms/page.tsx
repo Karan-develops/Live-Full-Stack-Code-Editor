@@ -1,6 +1,6 @@
 import GoBackBtn from "@/components/GoBackBtn"
 
-const page = () => {
+const TermsPage = () => {
   return (
     <div>
         <GoBackBtn/>
@@ -23,4 +23,4 @@ const page = () => {
   )
 }
 
-export default page
+export default TermsPage
