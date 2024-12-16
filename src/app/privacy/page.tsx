@@ -19,7 +19,7 @@ const page = () => {
                 <li className="animate-fade-in delay-100">To improve and personalize our platform.</li>
                 <li className="animate-fade-in delay-200">To communicate important updates.</li>
             </ul>
-            <p className="mt-6 text-center animate-slide-in-right">If you have any concerns, contact us at <a href="mailto:mrkaran2k5@gmail.com" className="text-blue-400 underline">privacy@karan's-codeCanva.com</a>.</p>
+            <p className="mt-6 text-center animate-slide-in-right">If you have any concerns, contact us at <a href="mailto:mrkaran2k5@gmail.com" className="text-blue-400 underline">privacy@karan-codeCanva.com</a>.</p>
         </div>
         </div>
 

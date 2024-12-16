@@ -3,7 +3,7 @@ import { ConvexHttpClient } from "convex/browser";
 import React from "react";
 import { api } from "../../../../convex/_generated/api";
 import Link from "next/link";
-import { ArrowUpRightFromCircle, Blocks, CloudUpload, Code2, FileCode2, Sparkles } from "lucide-react";
+import { ArrowUpRightFromCircle, Blocks, CloudUpload, Code2, Sparkles } from "lucide-react";
 import { SignedIn } from "@clerk/nextjs";
 import ThemeSelector from "./ThemeSelector";
 import LanguageSelector from "./LanguageSelector";

@@ -31,7 +31,7 @@ const page = () => {
               href="mailto:mrkaran2k5@gmail.com"
               className="text-blue-400 underline"
             >
-              support@karan's-codeCanva.com
+              support@karan-codeCanva.com
             </a>
             .
           </li>
