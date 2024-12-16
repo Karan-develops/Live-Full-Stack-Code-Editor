@@ -1,4 +1,4 @@
-import { Blocks } from "lucide-react";
+import { Blocks, Copyright } from "lucide-react";
 import Link from "next/link";
 
 const Footer = () => {
@@ -11,6 +11,9 @@ const Footer = () => {
             <Blocks className="size-5" />
             <span>Built for developers, by developers</span>
           </div>
+          <span className="flex items-center gap-1 text-gray-400 mr-32">
+            <Copyright /> Karan Aggarwal
+          </span>
           <div className="flex items-center gap-6">
             <Link
               href="/support"
